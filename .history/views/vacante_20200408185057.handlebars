@@ -1,0 +1,40 @@
+<div class="contenido-superior vacante contenedor">
+    <div class="caja">
+        {{!-- imprimir como objeto --}}
+        <p class="etiqueta">Empresa</p>
+        <p class="nombre">{{vacante.empresa}}</p>
+    </div>
+    <div class="caja">       
+        <p class="etiqueta">Ubicación</p>
+        <p class="nombre">{{vacante.ubicacion}}</p>
+    </div>
+    <div class="caja">
+        
+        <p class="etiqueta">Contrato</p>
+        <p class="nombre">{{vacante.contrato}}</p>
+    </div>
+    <div class="caja">
+        
+        <p class="etiqueta">Salario</p>
+        <p class="nombre">$ {{vacante.salario}}</p>
+    </div>
+</div>
+
+<div class="vacante-contenedor contenedor">
+    <main class="contenido">
+        <h2>Descripción del Puesto</h2>
+        <div class="vacante-descripcion">
+            {{!-- Imprimir html son 3 llaves --}}
+            {{{vacante.descripcion}}}
+        </div>
+    </main>
+    <aside class="sidebar">
+        <h2>Conocimientos Deseados</h2>
+        
+        <ul class="skills">
+            {{$each vacante.skills}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </aside>
+</div>

@@ -1,0 +1,1 @@
+const emailConfig = require('../config/email');

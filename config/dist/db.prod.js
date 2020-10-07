@@ -1,0 +1,1 @@
+"use strict";var mongoose=require("mongoose");require("dotenv").config({path:"variables.env"}),mongoose.connect(process.env.DATABASE,{useNewUrlParser:!0,useUnifiedTopology:!0}),mongoose.connection.on("error",function(e){console.log(e)}),require("../models/vacantes"),require("../models/usuarios");

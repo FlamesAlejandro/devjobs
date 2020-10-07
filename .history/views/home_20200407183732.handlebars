@@ -1,0 +1,29 @@
+<main class="lista-vacantes">
+    <h2>Lista de Vacantes</h2>
+
+    {{!-- Revisar si hay vacantes, o el arreglo --}}
+    {{#if vacantes.lenght}}
+
+    {{#each vacantes}}
+        <div class="vacante">
+            <div class="caja">
+                <h3>Facebook</h3>
+                <p class="puesto">React Developer</p>
+            </div>
+            <div class="caja">
+                <p class="etiqueta">Ubicación</p>
+                <p class="nombre">Remoto</p>
+            </div>
+            <div class="caja">
+                <p class="etiqueta">Contrato</p>
+                <p class="nombre contrato">Tiempo Completo</p>
+            </div>
+            <div class="caja centrar-ventical">
+                <a href="#" class="btn btn-verde">Más Info</a>
+            </div>
+        </div>
+    {{/each}}
+    {{else}}
+        <p>No hay vacantes</p>
+    {{/if}}
+</main>
